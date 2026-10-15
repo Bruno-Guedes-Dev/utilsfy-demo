@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Utilsfy — site de exemplo com marcações online</title>
+<style>
+:root {
+    --fundo: #faf7f2;
+    --papel: #ffffff;
+    --tinta: #1f2430;
+    --tinta-2: #5b6272;
+    --linha: #e4ddd1;
+    --marca: #1f2430;
+    --quente: #c9783f;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--tinta);
+    background: var(--fundo);
+}
+a { color: inherit; }
+
+/* Faixa fixa: o site diz o que é, sempre. */
+.faixa {
+    position: sticky; top: 0; z-index: 10;
+    padding: 8px 16px;
+    font-size: 14px; text-align: center;
+    color: #fff; background: var(--quente);
+}
+.faixa a { color: #fff; font-weight: 600; }
+
+.topo {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    max-width: 1040px; margin: 0 auto; padding: 20px 16px;
+}
+.logo { font-size: 20px; font-weight: 800; letter-spacing: .02em; text-decoration: none; }
+.logo span { color: var(--quente); }
+.nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+.nav a { text-decoration: none; color: var(--tinta-2); }
+.nav a:hover { color: var(--tinta); }
+
+.hero {
+    padding: 72px 16px 88px;
+    text-align: center;
+    color: #fff;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(201, 120, 63, .55), transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(92, 122, 160, .45), transparent 50%),
+        linear-gradient(135deg, #1f2430, #343b4d);
+}
+.hero h1 { margin: 0 0 12px; font-size: clamp(30px, 6vw, 52px); line-height: 1.15; }
+.hero p { max-width: 620px; margin: 0 auto 28px; font-size: 18px; color: #e3e6ee; }
+.botao {
+    display: inline-block; padding: 14px 28px;
+    font-size: 17px; font-weight: 700; text-decoration: none;
+    color: var(--tinta); background: #fff; border-radius: 999px;
+}
+
+.seccao { max-width: 1040px; margin: 0 auto; padding: 64px 16px; }
+.seccao h2 { margin: 0 0 8px; font-size: 28px; }
+.seccao .sub { margin: 0 0 32px; color: var(--tinta-2); }
+
+.grelha { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.cartao { padding: 22px; background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; }
+.cartao h3 { margin: 0 0 6px; font-size: 18px; }
+.cartao p { margin: 0; font-size: 15px; color: var(--tinta-2); }
+.cartao .forma {
+    width: 44px; height: 44px; margin-bottom: 14px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--quente), #e8b98f);
+}
+.cartao:nth-child(2) .forma { border-radius: 50%; background: linear-gradient(135deg, #5c7aa0, #a9bdd6); }
+.cartao:nth-child(3) .forma { border-radius: 12px 50% 12px 50%; background: linear-gradient(135deg, #5d8a6a, #b3d1ba); }
+
+.marcar { background: var(--papel); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
+.marcar .seccao { max-width: 720px; }
+.moldura { border: 1px solid var(--linha); border-radius: 14px; overflow: hidden; }
+.nota { margin: 14px 0 0; font-size: 14px; color: var(--tinta-2); }
+
+.contactos { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.contactos dt { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--tinta-2); }
+.contactos dd { margin: 2px 0 0; font-weight: 600; }
+
+.rodape { padding: 28px 16px; font-size: 14px; text-align: center; color: var(--tinta-2); }
+</style>
+</head>
+<body>
+
+<div class="faixa">
+    Demonstração do widget de marcações do <a href="https://utilsfy.com/para-empresas">Utilsfy</a>.
+    Este site é um exemplo, não um negócio real.
+</div>
+
+<div class="topo">
+    <a class="logo" href="#">site<span>.</span>exemplo</a>
+    <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#marcar">Marcar</a>
+        <a href="#contactos">Contactos</a>
+    </nav>
+</div>
+
+<section class="hero">
+    <h1>O site do teu negócio,<br>com marcações online</h1>
+    <p>Esta página mostra como fica o formulário de marcações do Utilsfy dentro de um site que já existe. O cliente marca aqui, sem sair do teu site.</p>
+    <a class="botao" href="#marcar">Marcar agora</a>
+</section>
+
+<section class="seccao" id="sobre">
+    <h2>Sobre</h2>
+    <p class="sub">Aqui estaria a apresentação do teu negócio.</p>
+    <p>Um site de um negócio costuma ter uma secção como esta: quem és, há quanto tempo trabalhas e o que te distingue. Nada disto muda quando juntas as marcações online. O formulário entra numa secção própria, mais abaixo, com as cores que escolheres.</p>
+</section>
+
+<section class="seccao" id="servicos">
+    <h2>Serviços</h2>
+    <p class="sub">Os serviços que aparecem no formulário são os que definires na tua área de empresas.</p>
+    <div class="grelha">
+        <div class="cartao"><div class="forma"></div><h3>Serviço de exemplo</h3><p>Cada serviço tem um nome e uma duração. As horas livres calculam-se a partir daí.</p></div>
+        <div class="cartao"><div class="forma"></div><h3>O teu horário</h3><p>O formulário só oferece horas dentro do horário da tua ficha, fora das férias e das pausas que marcares.</p></div>
+        <div class="cartao"><div class="forma"></div><h3>Uma só agenda</h3><p>As marcações feitas aqui, na ficha do Utilsfy e as que registas por telefone ficam todas na mesma lista.</p></div>
+    </div>
+</section>
+
+<div class="marcar">
+    <section class="seccao" id="marcar">
+        <h2>Marcar</h2>
+        <p class="sub">O que está dentro da moldura é o widget. O resto da página é o site.</p>
+
+        <div class="moldura">
+            <div data-utilsfy-marcacoes="utilsfy-vila-real"></div>
+        </div>
+        <script async src="https://utilsfy.com/embed/marcacoes.js"></script>
+
+        <p class="nota">O widget só está ligado durante as demonstrações. Fora delas mostra «As marcações online não estão disponíveis de momento».</p>
+    </section>
+</div>
+
+<section class="seccao" id="contactos">
+    <h2>Contactos</h2>
+    <p class="sub">Aqui estariam a morada, o telefone e o horário do teu negócio.</p>
+    <dl class="contactos">
+        <div><dt>Morada</dt><dd>Rua de exemplo, Vila Real</dd></div>
+        <div><dt>Telefone</dt><dd>—</dd></div>
+        <div><dt>Horário</dt><dd>O da tua ficha</dd></div>
+    </dl>
+</section>
+
+<footer class="rodape">
+    Site de exemplo feito pelo <a href="https://utilsfy.com">Utilsfy</a> para mostrar o widget de marcações.
+</footer>
+
+</body>
+</html>
